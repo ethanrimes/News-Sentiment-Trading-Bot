@@ -9,22 +9,14 @@ from finbert_utils import estimate_sentiment
 from alpaca_trade_api.rest import APIError
 
 
-API_KEY = "PKYCHP3708LPIU7L62UG" 
-API_SECRET = "adAttT1AygD7TqKNBhPOSFVmSKP9ne6qy3qIb11O" 
+API_KEY = # Your API key
+API_SECRET = # Your API secret
 BASE_URL = "https://paper-api.alpaca.markets"
-NEWS_URL = "https://data.alpaca.markets/v1beta1/news?sort=desc"
-POSITIONS_URL = "https://paper-api.alpaca.markets/v2/positions"
 
 ALPACA_CREDS = {
-    "API_KEY":API_KEY, 
+    "API_KEY": API_KEY, 
     "API_SECRET": API_SECRET, 
     "PAPER": True
-}
-
-HEADERS = {
-    "accept": "application/json",
-    "APCA-API-KEY-ID": # your API key
-    "APCA-API-SECRET-KEY": # your API secret
 }
 
 class MLTrader(Strategy): 
@@ -45,7 +37,6 @@ class MLTrader(Strategy):
 
     def get_sentiment(self): 
         today, week_prior = self.get_dates()
-        # print('today:   ' + str(today))
         organizer = {}
         nonzero_positions = 0
         for symbol in self.symbols:
