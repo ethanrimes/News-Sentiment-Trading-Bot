@@ -23,8 +23,8 @@ ALPACA_CREDS = {
 
 HEADERS = {
     "accept": "application/json",
-    "APCA-API-KEY-ID": "PKYCHP3708LPIU7L62UG",
-    "APCA-API-SECRET-KEY": "adAttT1AygD7TqKNBhPOSFVmSKP9ne6qy3qIb11O"
+    "APCA-API-KEY-ID": # your API key
+    "APCA-API-SECRET-KEY": # your API secret
 }
 
 class MLTrader(Strategy): 
